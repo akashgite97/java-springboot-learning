@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www/thymeLeaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of iteration loop</title>
+</head>
+<body>
+    <h1>iteration example</h1>
+    <h2 th:text="${namesList}"></h2>
+    <ul>
+        <li th:each="n, status : ${namesList}">
+            <p th.style="${status.odd} ? 'font-weight:bold' : ''" th:text="${status.index}+' '+${n}"></p>
+        </li>
+    </ul>
+</body>
+</html>
